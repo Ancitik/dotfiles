@@ -1,7 +1,7 @@
 [user]
 	email = ancitik@protonmail.com
-	name = Alexandre LAURANS
-	# signingkey = CCE21CA0
+	name = "Alexandre LAURANS "
+	signingkey = 33FF55E0C017494A
 
 [credential]
 	helper = cache --timeout=1200

@@ -64,6 +64,7 @@ alias glol='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %C
 
 # Personal projects folders
 alias cdlab='cd $HOME/Documents/Lab'
+alias cdbl='cd $HOME/Documents/Lab/Ippon/berger-levrault/'
 
 # RAM
 alias ram='ps aux | awk '"'"'{print $6/1024 " MB\t\t" $11}'"'"' | sort -rn | head -25'
