@@ -17,11 +17,17 @@
     "emmet.triggerExpansionOnTab": true,
     "files.exclude": {
         "**/.git": false,
-        "**/*.js": {"when": "$(basename).ts"},
-        "**/*.js.map": true
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/*.js.map": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "gitblame.ignoreWhitespace": true,
-    "terminal.integrated.shell.linux": "/bin/zsh",
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
     "terminal.integrated.shell.osx": "/bin/zsh",
     "workbench.iconTheme": "material-icon-theme",
     "window.zoomLevel": 1,
@@ -103,5 +109,29 @@
     "files.autoSave": "afterDelay",
     "markdown.preview.fontFamily": "'Fira Code', 'PowerlineSymbols'",
     "git.autofetch": true,
-    "git.confirmSync": false
+    "git.confirmSync": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.project.importHint": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.minikube-path.linux": "/home/als/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
+        "vs-kubernetes.helm-path.linux": "/home/als/.vs-kubernetes/tools/helm/linux-amd64/helm",
+        "vs-kubernetes.draft-path.linux": "/home/als/.vs-kubernetes/tools/draft/linux-amd64/draft",
+        "vscode-kubernetes.minikube-path.linux": "/home/als/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "zsh"
+        }
+    },
+    "shiftleft-scan.resultsListSortBy": {
+        "column": "severityLevel",
+        "ascending": false
+    }
 }

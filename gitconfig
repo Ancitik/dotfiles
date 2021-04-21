@@ -1,7 +1,7 @@
 [user]
 	email = ancitik@protonmail.com
-	name = "Alexandre LAURANS "
-	signingkey = 33FF55E0C017494A
+	name = Alexandre LAURANS
+	signingkey = D9DAA72DC2452341
 
 [credential]
 	helper = cache --timeout=1200
@@ -48,3 +48,5 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[gpg]
+	program = gpg

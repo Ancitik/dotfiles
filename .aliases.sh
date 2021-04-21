@@ -5,6 +5,7 @@ alias ls='ls $LS_OPTIONS -hF'
 alias ll='ls $LS_OPTIONS -lAhF'
 alias hosts='sudo $EDITOR /etc/hosts'
 alias vtop='vtop --theme monokai'
+alias bat='batcat'
 
 # mv, rm, cp
 alias mv='mv -v'
@@ -136,8 +137,8 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 # change mac addresss and get unlimitted wifi in airport
 function airport() {
   local mac=$(openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//')
-  sudo ifconfig en0 ether $mac
-  sudo ifconfig en0 down
-  sudo ifconfig en0 up
+  sudo ifconfig enx9cebe887335b ether $mac
+  sudo ifconfig enx9cebe887335b down
+  sudo ifconfig enx9cebe887335b up
   echo "Your new physical address is $mac"
 }
