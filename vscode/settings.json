@@ -27,8 +27,7 @@
         "**/.factorypath": true
     },
     "gitblame.ignoreWhitespace": true,
-    "terminal.integrated.shell.linux": "/usr/bin/zsh",
-    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.defaultProfile.linux": "/usr/bin/zsh",
     "workbench.iconTheme": "material-icon-theme",
     "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
@@ -119,12 +118,10 @@
         "vs-kubernetes.draft-path.linux": "/home/als/.vs-kubernetes/tools/draft/linux-amd64/draft",
         "vscode-kubernetes.minikube-path.linux": "/home/als/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
     },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.png": "hediet.vscode-drawio",
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "terminal.integrated.profiles.linux": {
         "zsh": {
             "path": "zsh"
@@ -133,5 +130,9 @@
     "shiftleft-scan.resultsListSortBy": {
         "column": "severityLevel",
         "ascending": false
-    }
+    },
+    "workbench.editor.untitled.hint": "hidden",
+    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIjAwMDAwMFwiXSxcImZvcm1hdFdpZHRoXCI6MCxcImNyZWF0ZVRhcmdldFwiOmZhbHNlLFwicGFnZUZvcm1hdFwiOntcInhcIjowLFwieVwiOjAsXCJ3aWR0aFwiOjgyNyxcImhlaWdodFwiOjExNjl9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
+    "hediet.vscode-drawio.codeLinkActivated": true,
+    "hediet.vscode-drawio.theme": "min"
 }

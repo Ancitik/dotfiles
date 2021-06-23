@@ -15,7 +15,7 @@ export SPACESHIP_KUBECTL_SHOW=false
 export GOPATH=$HOME/go
 
 ZSH_THEME="spaceship"
-ZSH_TMUX_AUTOSTART='false'
+ZSH_TMUX_AUTOSTART='true'
 SPACESHIP_PROMPT_ORDER=(
   time          # Time stamps section
   user          # Username section
@@ -63,6 +63,8 @@ alias aws-login-sandbox='gsts --aws-profile=sandbox --idp-id C00lefphs --sp-id 5
 
 # Scaleway CLI autocomplete initialization.
 eval "$(scw autocomplete script shell=zsh)"
+eval "$(k3d completion zsh)"
+source <(argocd completion zsh)
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/als/.sdkman"
