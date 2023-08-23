@@ -1,7 +1,7 @@
 [user]
-	email = alexandre.laurans@ext.actia.fr
-	name = alaurans
-	signingkey = D9DAA72DC2452341
+	email = alaurans@sophiagenetics.com
+	name = Alexandre LAURANS
+	signingkey = 41E19B7AE29D02D6
 
 [credential]
 	helper = cache --timeout=1200
@@ -36,7 +36,7 @@
 	user = ancitik
 
 [commit]
-	gpgsign = true
+	gpgsign = false
 
 [push]
 	default = current

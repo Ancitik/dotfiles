@@ -28,7 +28,7 @@
     },
     "gitblame.ignoreWhitespace": true,
     "terminal.integrated.defaultProfile.linux": "/usr/bin/zsh",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "eq-material-theme-icons-ocean",
     "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
         "activityBar.background": "#333842",
@@ -94,7 +94,7 @@
     "extensions.ignoreRecommendations": true,
     "explorer.confirmDragAndDrop": false,
     "javascript.updateImportsOnFileMove.enabled": "never",
-    "workbench.colorTheme": "Palenight Italic",
+    "workbench.colorTheme": "Material Theme Ocean",
     "gitlens.advanced.fileHistoryFollowsRenames": false,
     "editor.fontFamily": "'Fira Code'", 
     "editor.fontLigatures": true,

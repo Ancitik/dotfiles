@@ -10,14 +10,16 @@ export EDITOR='nvim'
 export URLPROXY=''
 export HTTPPROXY='http://'$URLPROXY
 export HTTPSPROXY='https://'$URLPROXY
-export KUBECONFIG='/home/als/.kube/config'
-export SPACESHIP_KUBECTL_SHOW=false
+export KUBECONFIG='/Users/alaurans/.kube/config'
+export SPACESHIP_KUBECTL_SHOW=true
 export GOPATH=$HOME/go
 
 ZSH_THEME="spaceship"
-ZSH_TMUX_AUTOSTART='true'
+ZSH_TMUX_AUTOSTART='false'
 SPACESHIP_PROMPT_ORDER=(
   time          # Time stamps section
+  azure
+  ansible
   user          # Username section
   dir           # Current directory section
   host          # Hostname section
@@ -36,9 +38,10 @@ SPACESHIP_PROMPT_ORDER=(
   jobs          # Background jobs indicator
   exit_code     # Exit code section
   char          # Prompt character
+  venv
 )
 
-plugins=(docker docker-compose git npm nvm terraform vagrant zsh-completions gatsby kubectl helm github oc tmux)
+plugins=(docker docker-compose git npm nvm terraform vagrant zsh-completions gatsby kubectl helm github oc tmux virtualenv)
 
 # add aliases
 source $HOME/.aliases
@@ -48,24 +51,12 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-autoload bashcompinit && bashcompinit
+autoload -U +X bashcompinit && bashcompinit
 
-autoload -U compinit && compinit
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 source <(stern --completion=zsh)
-source /etc/bash_completion.d/azure-cli
-complete -C '/home/linuxbrew/.linuxbrew/bin/aws_completer' aws
-
-#autoload -U =X bashcompinit && bashcompinit
-
-unalias gsts
-alias aws-login-sandbox='gsts --aws-profile=sandbox --idp-id C00lefphs --sp-id 563310275444 --username alaurans@ippon.fr --force'
+source /opt/homebrew/etc/bash_completion.d/az
 
 # Scaleway CLI autocomplete initialization.
 eval "$(scw autocomplete script shell=zsh)"
 eval "$(k3d completion zsh)"
 source <(argocd completion zsh)
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/als/.sdkman"
-[[ -s "/home/als/.sdkman/bin/sdkman-init.sh" ]] && source "/home/als/.sdkman/bin/sdkman-init.sh"
