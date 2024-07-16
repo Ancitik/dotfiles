@@ -95,3 +95,4 @@ function airport() {
   sudo ifconfig en0 up
   echo "Your new physical address is $mac"
 }
+alias cat="bat"

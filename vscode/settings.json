@@ -96,9 +96,9 @@
     "javascript.updateImportsOnFileMove.enabled": "never",
     "workbench.colorTheme": "Material Theme Ocean",
     "gitlens.advanced.fileHistoryFollowsRenames": false,
-    "editor.fontFamily": "'Fira Code'", 
+    "editor.fontFamily": "'FiraCode-Retina', 'PowerlineSymbols'", 
     "editor.fontLigatures": true,
-    "terminal.integrated.fontFamily": "'Fira Code', 'PowerlineSymbols'",
+    "terminal.integrated.fontFamily": "FiraCode-Retina",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.cursorStyle": "line",
@@ -106,18 +106,12 @@
     "terminal.integrated.macOptionIsMeta": true,
     "terminal.integrated.macOptionClickForcesSelection": true,
     "files.autoSave": "afterDelay",
-    "markdown.preview.fontFamily": "'Fira Code', 'PowerlineSymbols'",
+    "markdown.preview.fontFamily": "'FiraCode-Retina', 'PowerlineSymbols'",
     "git.autofetch": true,
     "git.confirmSync": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "java.project.importHint": false,
-    "vs-kubernetes": {
-        "vs-kubernetes.minikube-path.linux": "/home/als/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
-        "vs-kubernetes.helm-path.linux": "/home/als/.vs-kubernetes/tools/helm/linux-amd64/helm",
-        "vs-kubernetes.draft-path.linux": "/home/als/.vs-kubernetes/tools/draft/linux-amd64/draft",
-        "vscode-kubernetes.minikube-path.linux": "/home/als/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
-    },
     "workbench.editorAssociations": {
         "*.png": "hediet.vscode-drawio",
         "*.ipynb": "jupyter.notebook.ipynb"
@@ -134,5 +128,16 @@
     "workbench.editor.untitled.hint": "hidden",
     "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIjAwMDAwMFwiXSxcImZvcm1hdFdpZHRoXCI6MCxcImNyZWF0ZVRhcmdldFwiOmZhbHNlLFwicGFnZUZvcm1hdFwiOntcInhcIjowLFwieVwiOjAsXCJ3aWR0aFwiOjgyNyxcImhlaWdodFwiOjExNjl9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
     "hediet.vscode-drawio.codeLinkActivated": true,
-    "hediet.vscode-drawio.theme": "min"
+    "hediet.vscode-drawio.theme": "min",
+    "redhat.telemetry.enabled": true,
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.settings.applyToAllProfiles": [
+        "editor.fontFamily"
+    ],
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.explorerKind": "external",
+    "terminal.sourceControlRepositoriesKind": "external",
 }

@@ -49,7 +49,7 @@ source $HOME/.aliases_custom
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.local/bin:${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 autoload -U +X bashcompinit && bashcompinit
 
@@ -60,3 +60,7 @@ source /opt/homebrew/etc/bash_completion.d/az
 eval "$(scw autocomplete script shell=zsh)"
 eval "$(k3d completion zsh)"
 source <(argocd completion zsh)
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/alaurans/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

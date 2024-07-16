@@ -50,3 +50,5 @@
 	newHighlight = green bold 22
 [gpg]
 	program = gpg
+[init]
+	defaultBranch = main
