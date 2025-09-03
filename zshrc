@@ -13,24 +13,26 @@ export HTTPSPROXY='https://'$URLPROXY
 export KUBECONFIG='/Users/alaurans/.kube/config'
 export SPACESHIP_KUBECTL_SHOW=true
 export GOPATH=$HOME/go
+export AWS_PROFILE=staging
+export SSH_AUTH_SOCK='~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock'
 
 ZSH_THEME="spaceship"
 ZSH_TMUX_AUTOSTART='false'
 SPACESHIP_PROMPT_ORDER=(
   time          # Time stamps section
-  azure
+  # azure
   ansible
+  pulumi
   user          # Username section
   dir           # Current directory section
   host          # Hostname section
   git           # Git section (git_branch + git_status)
   package       # Package version
   node          # Node.js section
-  php           # PHP section
+  # php           # PHP section
   docker        # Docker section
   aws           # Amazon Web Services section
   kubectl       # Kubectl context section
-  terraform     # Terraform workspace section
   exec_time     # Execution time
   line_sep      # Line break
 #  battery       # Battery level and status
@@ -41,7 +43,7 @@ SPACESHIP_PROMPT_ORDER=(
   venv
 )
 
-plugins=(docker docker-compose git npm nvm terraform vagrant zsh-completions gatsby kubectl helm github oc tmux virtualenv)
+plugins=(1password aws argocd battery docker docker-compose git npm nvm opentofu vagrant zsh-completions gatsby kubectl helm github oc tmux virtualenv)
 
 # add aliases
 source $HOME/.aliases
@@ -51,6 +53,8 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.local/bin:${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
 source <(stern --completion=zsh)
@@ -59,8 +63,27 @@ source /opt/homebrew/etc/bash_completion.d/az
 # Scaleway CLI autocomplete initialization.
 eval "$(scw autocomplete script shell=zsh)"
 eval "$(k3d completion zsh)"
+eval "$(stern --completion zsh)"
 source <(argocd completion zsh)
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/alaurans/.rd/bin:$PATH"
+# export PATH="/Users/alaurans/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# Added by Windsurf
+export PATH="/Users/alaurans/.codeium/windsurf/bin:$PATH"
+
+complete -o nospace -C /opt/homebrew/Cellar/tofuenv/1.0.7/versions/1.9.0/tofu tofu
+complete -o nospace -C /opt/homebrew/bin/terragrunt terragrunt
+
+# pnpm
+export PNPM_HOME="/Users/alaurans/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

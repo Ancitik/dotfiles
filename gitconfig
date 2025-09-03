@@ -1,5 +1,5 @@
 [user]
-	email = alaurans@sophiagenetics.com
+	email = alexandre.laurans@hublo.com
 	name = Alexandre LAURANS
 	signingkey = 41E19B7AE29D02D6
 
@@ -52,3 +52,8 @@
 	program = gpg
 [init]
 	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
