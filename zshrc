@@ -10,7 +10,7 @@ export EDITOR='nvim'
 export URLPROXY=''
 export HTTPPROXY='http://'$URLPROXY
 export HTTPSPROXY='https://'$URLPROXY
-export KUBECONFIG='/Users/alaurans/.kube/config'
+export KUBECONFIG='/Users/alexandrelaurans/.kube/config'
 export SPACESHIP_KUBECTL_SHOW=true
 export GOPATH=$HOME/go
 export AWS_PROFILE=staging
@@ -65,25 +65,3 @@ eval "$(scw autocomplete script shell=zsh)"
 eval "$(k3d completion zsh)"
 eval "$(stern --completion zsh)"
 source <(argocd completion zsh)
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-# export PATH="/Users/alaurans/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-# Added by Windsurf
-export PATH="/Users/alaurans/.codeium/windsurf/bin:$PATH"
-
-complete -o nospace -C /opt/homebrew/Cellar/tofuenv/1.0.7/versions/1.9.0/tofu tofu
-complete -o nospace -C /opt/homebrew/bin/terragrunt terragrunt
-
-# pnpm
-export PNPM_HOME="/Users/alaurans/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
