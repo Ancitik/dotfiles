@@ -10,7 +10,7 @@ export EDITOR='nvim'
 export URLPROXY=''
 export HTTPPROXY='http://'$URLPROXY
 export HTTPSPROXY='https://'$URLPROXY
-export KUBECONFIG='/Users/alexandrelaurans/.kube/config'
+export KUBECONFIG='/Users/alaurans/.kube/config'
 export SPACESHIP_KUBECTL_SHOW=true
 export GOPATH=$HOME/go
 export AWS_PROFILE=staging
@@ -43,7 +43,7 @@ SPACESHIP_PROMPT_ORDER=(
   venv
 )
 
-plugins=(1password aws argocd battery docker docker-compose git npm nvm opentofu vagrant zsh-completions gatsby kubectl helm github oc tmux virtualenv)
+plugins=(1password aws argocd battery docker docker-compose git npm opentofu vagrant zsh-completions gatsby kubectl helm github oc tmux virtualenv)
 
 # add aliases
 source $HOME/.aliases
@@ -58,10 +58,14 @@ autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
 source <(stern --completion=zsh)
-source /opt/homebrew/etc/bash_completion.d/az
 
 # Scaleway CLI autocomplete initialization.
 eval "$(scw autocomplete script shell=zsh)"
+
 eval "$(k3d completion zsh)"
+
 eval "$(stern --completion zsh)"
+
 source <(argocd completion zsh)
+
+eval "$(mise activate zsh)"
